@@ -1,0 +1,7 @@
+#simple program to read file contents and convert it to dictionary
+d={}
+f = open('test2.txt')
+for i in f:
+    (key,value) = i.split()
+    d[int(key)] = value
+print(d)
