@@ -1,0 +1,29 @@
+class Employee:
+# Using class to show if employee eligible for promotion or not
+    def __init__(self,eid,name,salary):
+        self.eid = eid
+        self.name = name
+        self.salary = salary
+    def promotion(self):
+        if self.salary >=25000:
+            print("Eligible for promotion!!!")
+        else:
+            print("Not eligible for promotion.")
+if __name__ == '__main__':
+    l2 =[]
+    print("EMPLOYEE DISCOUNT SYSTEM")
+    print("="*30)
+    x = int(input("Enter number of employees: "))
+    for i in range(x):
+        id = int(input("Enter Employee ID: "))
+        l2.append(id)
+        n = input("Enter Employee name: ")
+        l2.append(n)
+        sal = int(input("Enter salary: "))
+        l2.append(sal)
+
+    emp = Employee(id,n,sal)
+    emp.promotion()
+
+
+
