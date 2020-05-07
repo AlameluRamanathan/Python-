@@ -1,0 +1,9 @@
+class Temperature:
+    def convertFarenheit(self,celcius):
+        return(celcius * (9/5))+32
+
+    def convertCelcius(self,farenheit):
+        return(farenheit-32)*5/9
+t = Temperature()
+print(t.convertCelcius(15))
+print(t.convertFarenheit(15))
