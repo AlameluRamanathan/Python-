@@ -1,0 +1,14 @@
+#Encrypt user id and password stored in a text file
+import base64
+f=open('test.txt','r')
+content = f.read()
+sub = content.split()
+length = len(sub)
+print(sub)
+for i in range(length):
+    if sub[i].endswith(':'):
+        print(sub[i],end =' ')
+    else:
+        encodedBytes = base64.b64encode(sub[i].encode("utf-8"))
+        encodedStr = str(encodedBytes, "utf-8")
+        print(encodedStr)
