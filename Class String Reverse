@@ -1,0 +1,12 @@
+class Rev:
+    def reverse(self,str):
+        s = ""
+        for ch in str:
+            s = ch + s
+        return s
+
+if __name__=="__main__":
+    mystr = input("Enter a string: ")
+    r = Rev()
+    y = r.reverse(mystr)
+    print(y)
