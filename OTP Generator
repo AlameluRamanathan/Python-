@@ -1,0 +1,14 @@
+#import library
+import math,random
+
+#function to generate OTP
+def generateOTP():
+    digits ="0123456789"
+    otp =""
+    for i in range(5):
+        otp += digits[math.floor(random.random()*10)]
+    return otp
+    
+#driver code
+if __name__=="__main__":
+    print("OTP of 5 digit:", generateOTP())
