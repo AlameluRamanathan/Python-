@@ -1,0 +1,15 @@
+#import library
+import math,random
+
+#function to generate OTP
+def generateOTP():
+    string ="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    otp =""
+    length = len(string)
+
+    for i in range(5):
+        otp += string[math.floor(random.random()*length)]
+    return otp
+# Driver Code
+if __name__=="__main__":
+    print("OTP of 5 digit:", generateOTP())
