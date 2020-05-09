@@ -1,0 +1,25 @@
+# function to get string input
+def getInput():
+    value = []
+    key =[]
+    str = input("Enter input string: ")
+    value= str.split()
+# generating keys
+    for i in range(0,len(value)):
+        key.append(i)
+# creating dictionary
+    di = dict(zip(key,value))
+    print(di)
+    return di
+    
+# function to diaplay the occurrences of the most repeated word    
+def display(di):
+    most ={}
+    for key,value in di.items():
+        if value not in most:
+            most[value]=0
+        else:
+            most[value]+=1
+    print(max(most, key=most.get))
+
+display(getInput())
