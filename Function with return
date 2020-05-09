@@ -1,0 +1,9 @@
+def absolute_values(num):
+    if num>=0:
+        return num
+    else:
+        return -num
+print (absolute_values(2))
+print(absolute_values(-4))
+
+
