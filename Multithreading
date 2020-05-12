@@ -1,0 +1,28 @@
+from threading import *
+from time import sleep
+
+class T1(Thread):
+    def run(self):
+        for i in range(5):
+            print("Hello")
+            sleep(1)
+class T2(Thread):
+    def run(self):
+        for i in range(5):
+            print("Hai")
+            sleep(1)
+
+ob1 = T1()
+ob2 = T2()
+
+ob1.start()
+sleep(0.2)
+ob2.start()
+
+ob1.join()
+ob2.join()
+print("Bye")
+
+
+
+
