@@ -1,0 +1,7 @@
+n = int(input("Enter number of customers: "))
+cust=()
+for i in range(n):
+    name = input("Customer name: ")
+    cust = cust +(name,)
+for i in range(n):
+    print(cust[i])
